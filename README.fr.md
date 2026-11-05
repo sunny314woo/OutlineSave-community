@@ -1,98 +1,122 @@
 **Langues :** [Français](./README.fr.md) · [English](./README.md) · [简体中文](./README.zh-CN.md) · [Español](./README.es.md) · [日本語](./README.ja.md)
 
-# ChatGPT Outline Community — sommaire des longues conversations
+# OutlineSave — ChatGPT Outline, Search & Export to HTML & PDF (édition communautaire)
 
-Extension Chrome légère à code consultable qui ajoute un sommaire cliquable aux conversations ChatGPT.
+OutlineSave est une extension de navigateur qui facilite la navigation, la recherche, l'annotation et l'exportation de longues conversations avec une IA. Elle permet de transformer les échanges en contenu structuré, facile à retrouver et à conserver, sans faire défiler indéfiniment l'historique.
 
-![ChatGPT Outline community demo](./jump-ezgif.com-crop.gif)
+Ce dépôt contient une **ancienne démonstration ChatGPT aux fonctions limitées, dont le code source est consultable**. Il ne contient pas le code complet de l'extension commerciale actuelle et ne reflète pas nécessairement sa dernière version. L'extension OutlineSave complète est distribuée séparément sur le Chrome Web Store.
 
-**[Installer Outlinesave depuis Chrome Web Store](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj)** · **[Essayer la démonstration HTML](https://wisteriasoftware.uk/demo)**
+**[Installer OutlineSave depuis le Chrome Web Store](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj)** · **[Explorer la démo interactive de l'export HTML](https://wisteriasoftware.uk/demo)** · **[Découvrir le produit](https://wisteriasoftware.uk/outline-pro)**
 
-> **Remarque :** La démo communautaire permet de naviguer uniquement vers les 15 premiers éléments. Les fonctions Outlinesave ci-dessous appartiennent à l'extension complète distincte.
+![Démonstration communautaire de ChatGPT Outline](./jump-ezgif.com-crop.gif)
 
-## Pourquoi un sommaire de conversation ?
+> **Limite de la démo communautaire :** seuls les 15 premiers éléments du sommaire permettent de naviguer. La recherche, les annotations, l'exportation et les autres fonctions présentées ci-dessous appartiennent à l'extension OutlineSave complète, à installer séparément.
 
-Dans une longue discussion, retrouver une question ou une réponse prend du temps. Le sommaire facilite la navigation.
+## Ce que propose la démonstration communautaire
 
-## Fonctions de l'édition communautaire
+- Un sommaire cliquable des conversations ChatGPT
+- Une actualisation automatique lorsque la conversation s'allonge
+- Une barre latérale positionnable à gauche ou à droite
+- Une démonstration simple de la navigation dans une conversation
 
-- Sommaire cliquable des conversations ChatGPT
-- Actualisation lorsque la conversation évolue
-- Barre latérale à gauche ou à droite
-- Limite de la démo : seuls les 15 premiers éléments sont navigables
+La limite des 15 éléments navigables s'applique **uniquement à cette démo**, et non à l'extension complète OutlineSave.
 
-## Outlinesave : version complète
+## Découvrir l'extension OutlineSave complète
 
-Outlinesave permet de parcourir, rechercher, annoter et exporter les conversations ChatGPT, Gemini, Claude et DeepSeek.
+La version complète prend en charge les conversations sur **ChatGPT, Gemini, Claude et DeepSeek**. Les fonctions et les interactions peuvent varier selon la plateforme.
 
-### Sommaire à deux niveaux et recherche
+### ChatGPT Outline : un sommaire à deux niveaux pour les longues conversations
 
-Les questions forment le premier niveau et les titres des réponses IA le second. Recherchez les titres et accédez aux résultats. Des conversations ChatGPT de plus de 400 tours ont été testées ; le chargement progressif peut prendre du temps.
+Les questions de l'utilisateur constituent le premier niveau et les titres des réponses de l'IA le second. Recherchez un titre dans le sommaire, puis accédez à l'endroit correspondant sans parcourir chaque message.
 
-### Navigation discrète
+Pour les conversations ChatGPT très longues, le sommaire peut se charger progressivement. Le délai et l'exhaustivité dépendent de la plateforme et de la conversation.
 
-Déployez, réduisez ou masquez le panneau, utilisez une commande flottante et ajustez la taille ou la position si disponible. J/K permettent de naviguer et Esc de fermer lorsque pris en charge ; cela dépend de la plateforme.
+### Search : retrouver le bon passage
 
-### Export HTML autonome, hors ligne et adaptatif
+Recherchez les questions et les titres de réponses dans le sommaire de la conversation en cours. Après exportation au format HTML, recherchez également des mots et passages dans l'intégralité du texte enregistré.
 
-Enregistrez un fichier HTML unique lisible hors ligne sur ordinateur ou téléphone. Il conserve sommaire, recherche intégrale, favoris, filtres par couleur, notes, code, formules et diagrammes Mermaid.
+### Export to HTML : conserver une page de connaissances hors ligne
 
-**[Essayer la démonstration HTML](https://wisteriasoftware.uk/demo)**
+Exportez une conversation dans un fichier HTML autonome et adaptatif. Ouvrez-le localement sans revenir sur ChatGPT ni attendre le chargement de l'historique d'origine.
 
-### Surlignage, notes et formats
+L'export HTML peut conserver :
 
-Quatre couleurs, soulignement, notes, favoris et filtres. Export également en Markdown et JSON.
+- Le sommaire et la navigation dans la conversation
+- La recherche en texte intégral
+- Les surlignages, soulignements, notes et favoris existants
+- Les filtres par favoris et par couleur de surlignage
+- Les blocs de code, formules mathématiques et diagrammes Mermaid
 
-### Priorité au local, sans compte Outlinesave
+**[Essayer la démonstration interactive de l'export HTML](https://wisteriasoftware.uk/demo)**
 
-Le texte des conversations est traité localement par défaut et n'est pas envoyé aux serveurs Outlinesave. Aucun compte produit n'est nécessaire. La version boutique utilise quelques événements opérationnels anonymes ; les connexions facultatives sont déclenchées par l'utilisateur.
+### Export PDF
 
-### Sauvegarde manuelle sur Google Drive
+L'exportation PDF est actuellement en cours de développement. **Elle n'est pas encore incluse dans la version publiée sur le Chrome Web Store** à la date de cette mise à jour. Consultez la [fiche du Chrome Web Store](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj) pour connaître les fonctions disponibles.
 
-Enregistrez du Markdown sur votre propre Google Drive à votre initiative, sans synchronisation automatique.
+### Surlignages, notes, favoris, Markdown et JSON
 
-### Organiser les contenus avec Inbox Local
+La version complète permet de surligner avec quatre couleurs, de souligner du texte, d'ajouter des notes et de marquer des passages importants. Elle propose également l'exportation Markdown et JSON.
 
-Inbox Local est une application distincte pour classer Markdown et HTML enrichi localement, avec dossiers, étiquettes, recherche, lecture, annotations et sauvegarde manuelle.
+### Traitement local des conversations par défaut
 
-[Inbox Local](https://github.com/sunny314woo/wisteria-suite/tree/main/apps/inbox-local)
+OutlineSave traite le contenu des conversations localement par défaut et n'envoie pas leur texte aux serveurs de Wisteria Software. Aucun compte OutlineSave n'est nécessaire. Certaines données d'activation et de fonctionnement peuvent être traitées pour gérer les licences et le service. La sauvegarde facultative vers Google Drive est déclenchée par l'utilisateur et enregistre les données sélectionnées dans son propre espace. Consultez la [Politique de confidentialité](https://wisteriasoftware.uk/privacy).
 
-## Comparer les éditions
+### Option : organiser ses contenus avec Inbox Local
 
-| Fonction | Communauté | Outlinesave |
+[Inbox Local](https://github.com/sunny314woo/wisteria-suite/tree/main/apps/inbox-local) est une application distincte de gestion des connaissances, conçue pour un stockage local. Elle peut organiser les fichiers Markdown et HTML enrichi exportés depuis OutlineSave. Elle ne fait pas partie de cette démo communautaire.
+
+## Démo communautaire et extension OutlineSave complète
+
+| Fonction | Démo de ce dépôt | OutlineSave complet |
 |---|---|---|
-| Sommaire ChatGPT | 15 liens actifs | Oui |
-| Deux niveaux et recherche | Non | Oui |
-| Notes, surlignage, favoris | Non | Oui |
-| HTML / Markdown / JSON | Non | Oui |
-| Gemini, Claude et DeepSeek | Non | Oui |
+| Sommaire des conversations ChatGPT | Oui | Oui |
+| Navigation par clic | 15 premiers éléments seulement | Sommaire complet |
+| Sommaire à deux niveaux | Non | Oui |
+| Recherche dans les titres du sommaire | Non | Oui |
+| Recherche intégrale dans le HTML exporté | Non | Oui |
+| Surlignages, soulignements, notes et favoris | Non | Oui |
+| Export HTML hors ligne | Non | Oui |
+| Export Markdown et JSON | Non | Oui |
+| Prise en charge de Gemini, Claude et DeepSeek | Non | Oui |
+| Export PDF | Non | En développement ; vérifier la boutique |
 
 ## Questions fréquentes
 
-### Comment ajouter un sommaire à ChatGPT ?
+### Comment ajouter un sommaire à une longue conversation ChatGPT ?
 
-Installez la démo communautaire ou Outlinesave pour les fonctions complètes.
+Installez l'extension OutlineSave complète depuis le [Chrome Web Store](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj). La démo de ce dépôt se limite à 15 éléments navigables.
 
-### Peut-on rechercher une longue conversation ?
+### Peut-on rechercher dans une conversation ChatGPT ?
 
-Outlinesave recherche les titres ; le HTML exporté permet une recherche intégrale.
+L'extension complète permet de rechercher les titres du sommaire de la conversation. Après exportation en HTML, vous pouvez aussi rechercher dans le texte intégral enregistré.
 
-### Peut-on exporter un HTML hors ligne ?
+### Peut-on exporter ChatGPT vers un fichier HTML hors ligne ?
 
-Oui, un fichier adaptatif avec sommaire, recherche, filtres et notes.
+Oui. L'extension complète produit un fichier HTML autonome et adaptatif conservant le sommaire, la recherche intégrale et les annotations existantes compatibles. Vous pouvez l'ouvrir localement sans charger ChatGPT.
 
-### Faut-il créer un compte ?
+### OutlineSave envoie-t-il mes conversations à ses serveurs ?
 
-Aucun compte Outlinesave n'est requis. Google Drive reste facultatif et manuel.
+Par défaut, le texte des conversations est traité localement et n'est pas envoyé aux serveurs de Wisteria Software. La sauvegarde facultative et les services de fonctionnement ont des traitements de données distincts : consultez la [Politique de confidentialité](https://wisteriasoftware.uk/privacy).
 
-## Installer la démo localement
+### OutlineSave est-il gratuit ?
 
-Ouvrez chrome://extensions, activez le mode développeur et chargez ce dossier comme extension non empaquetée.
+L'extension complète propose des fonctions gratuites ainsi que des offres d'essai et des licences payantes. Les quotas d'exportation et les conditions peuvent évoluer : consultez la [page officielle](https://wisteriasoftware.uk/outline-pro).
 
-## Licence
+### Peut-on lire le HTML exporté sur un téléphone ?
 
-Code consultable sous licence personnalisée LICENSE, pas MIT ni Apache-2.0. Voir NOTICE pour la marque.
+Oui. Le fichier HTML adaptatif peut être transféré sur un téléphone et ouvert dans un navigateur compatible, sans recharger la conversation ChatGPT d'origine.
 
-**[Installer Outlinesave depuis Chrome Web Store](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj)** · **[Essayer la démonstration HTML](https://wisteriasoftware.uk/demo)**
+## Exécuter la démonstration communautaire en local
+
+1. Ouvrez **chrome://extensions** dans Chrome.
+2. Activez le **mode développeur**.
+3. Cliquez sur **Charger l'extension non empaquetée**.
+4. Sélectionnez le dossier de ce dépôt.
+
+## Licence et accès au code source
+
+Ce dépôt est une **démonstration communautaire dont le code source est consultable**, soumise à la licence personnalisée [LICENSE](./LICENSE), **et non aux licences MIT ou Apache-2.0**. L'accès au code de cette démo ne confère aucun droit sur l'extension commerciale, la marque, les services de serveur ou d'autres éléments propriétaires. Voir [NOTICE](./NOTICE).
+
+**[Installer OutlineSave depuis le Chrome Web Store](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj)** · **[Explorer la démo interactive de l'export HTML](https://wisteriasoftware.uk/demo)**
 
 **Langues :** [Français](./README.fr.md) · [English](./README.md) · [简体中文](./README.zh-CN.md) · [Español](./README.es.md) · [日本語](./README.ja.md)
