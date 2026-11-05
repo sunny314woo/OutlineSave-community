@@ -1,110 +1,122 @@
 **语言切换：** [简体中文](./README.zh-CN.md) · [English](./README.md) · [Español](./README.es.md) · [日本語](./README.ja.md) · [Français](./README.fr.md)
 
-# ChatGPT Outline 社区版：为 ChatGPT 长对话生成可点击目录
+# OutlineSave — ChatGPT Outline, Search & Export to HTML & PDF（社区版）
 
-轻量级、源码可查看的 Chrome 扩展。为 ChatGPT 对话生成目录，点击问题直接定位，不必反复滚动寻找旧回答。
+OutlineSave 是一款帮助用户整理 AI 长对话的浏览器扩展：提供目录导航、搜索、标注和导出，让聊天记录成为方便查找、复习和保存的知识内容，而不必一遍遍向上滚动寻找旧回答。
 
-![ChatGPT Outline community demo](./jump-ezgif.com-crop.gif)
+**本仓库提供的是早期、功能受限、源码可查看的 ChatGPT 社区演示版**，不是当前商业正式版的完整源码，也不代表最新线上功能实现。完整的 OutlineSave 扩展通过 Chrome 网上应用店单独发布。
 
-**[前往 Chrome 商店安装 Outlinesave](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj)** · **[在线体验 HTML 导出效果](https://wisteriasoftware.uk/demo)**
+**[从 Chrome 商店安装 OutlineSave 正式版](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj)** · **[在线体验 HTML 导出效果](https://wisteriasoftware.uk/demo)** · **[查看产品介绍](https://wisteriasoftware.uk/outline-pro)**
 
-> **注意：** 社区演示版仅前 15 条目录可跳转。下文 Outlinesave 功能属于单独发布的正式版扩展。
+![ChatGPT Outline 社区版演示](./jump-ezgif.com-crop.gif)
 
-## 为什么需要 ChatGPT 对话目录？
+> **社区演示版限制：** 只有前 15 条目录支持点击跳转。下文提到的搜索、标注、导出等完整功能属于需要另外安装的 OutlineSave 正式版，而非本仓库代码。
 
-长对话积累几十甚至几百轮后，找回以前的问题、技术方案和关键回答会越来越困难。目录让对话更容易导航和回顾。
+## 社区演示版包含什么？
 
-## 社区版包含什么？
+- 为 ChatGPT 对话生成可点击的目录
+- 对话新增内容时自动更新目录
+- 目录侧边栏支持左右位置切换
+- 体验长对话目录导航的基本交互
 
-- 为 ChatGPT 对话生成可点击目录
-- 对话增长时自动刷新目录
-- 支持左右侧边栏位置切换
-- 演示版限制：只有前 15 条目录可以点击跳转
+仅前 15 条目录可跳转，是**本仓库演示版**的限制，不代表 OutlineSave 正式版的目录长度限制。
 
-## 需要更完整的功能？了解 Outlinesave
+## 了解 OutlineSave 正式版
 
-Outlinesave 是持续维护的正式版浏览器扩展，支持 ChatGPT、Gemini、Claude、DeepSeek 的长对话导航、检索、标注和导出。
+正式版支持 **ChatGPT、Gemini、Claude 和 DeepSeek** 的对话。不同 AI 平台的具体功能和交互方式可能有所差异。
 
-### 完整两级目录与目录标题检索
+### ChatGPT Outline：长对话的两级目录导航
 
-用户提问作为一级目录，AI 回答标题作为二级目录。可以搜索问题与标题，并跳转到匹配位置。ChatGPT 超长对话支持逐步加载目录；已测试 400 轮以上的场景，但加载需要时间，实际表现取决于平台。
+正式版提供两级目录：用户提问为一级，AI 回答中的标题为二级。可搜索目录标题，并跳转到对应的对话位置，不必逐条翻找。
 
-### 低打扰阅读：折叠、浮动入口、快捷键
+对于超长的 ChatGPT 对话，目录可以逐步加载。加载时间和完整程度仍取决于原平台及对话情况。
 
-根据需要展开侧边栏、收起为紧凑工具栏或小浮动入口，暂时隐藏目录，并调整支持的面板宽度或位置。J/K 可用于目录导航，Esc 可关闭面板；不同 AI 平台的交互略有差异。
+### Search：找回需要的内容
 
-### 可搜索、可筛选、适配手机的离线 HTML 知识页
+在在线对话中搜索用户问题与 AI 回答的目录标题；导出为 HTML 后，还可以对保存的正文进行全文搜索。**目录标题搜索和离线 HTML 全文搜索是不同能力**，不要混为一谈。
 
-将对话导出为独立的单文件 HTML，保存后可在本地离线打开，也能在手机浏览器阅读。保留目录、全文搜索、书签、四色高亮筛选、备注和标注；支持代码、数学公式及 Mermaid 流程图。阅读已导出的文件不需要重新打开 ChatGPT，也不需要安装扩展。
+### Export to HTML：把对话保存成离线知识页
 
-**[在线体验 HTML 导出效果](https://wisteriasoftware.uk/demo)**
+将聊天记录导出为独立、适配不同屏幕的 HTML 文件。保存后可直接在本地打开，无需重新进入 ChatGPT，也不必等待原始长对话重新加载。
 
-### 四色高亮、备注、书签及其他导出格式
+HTML 导出可以保留：
 
-用四色高亮标记重点、添加下划线与备注，收藏有价值的章节，并按条件筛选。还支持 Markdown、JSON 导出。
+- 两级目录与跳转导航
+- 全文搜索
+- 已有高亮、下划线、备注和书签
+- 书签及高亮颜色筛选
+- 代码块、数学公式和 Mermaid 流程图
 
-### 本地优先，无需注册 Outlinesave 账号
+**[在线体验可交互的 HTML 导出文件](https://wisteriasoftware.uk/demo)**
 
-对话内容默认在浏览器本地处理，不会上传 AI 对话正文到 Outlinesave 服务器。无需注册 Outlinesave 用户账号。商店正式版包含最小匿名运行统计；主动激活、Google Drive 手动备份或向本地 Inbox 发送内容时会连接相应服务。
+### PDF 导出
 
-### 手动备份到自己的 Google Drive
+PDF 导出功能正在开发中。**截至本次 README 更新，PDF 尚未随 Chrome 商店正式版发布。** 当前可用的功能请以 [Chrome 商店页面](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj) 为准。
 
-用户自行决定何时将 Markdown 内容备份到自己的 Google Drive；不是后台自动同步，也不会默认上传聊天内容。
+### 高亮、备注、书签、Markdown 和 JSON
 
-### 配合 Inbox Local 长期管理 AI 知识
+正式版可用四种颜色高亮重点、添加下划线与备注、收藏重要章节，也支持 Markdown 和 JSON 导出。
 
-Inbox Local 是独立的本地优先知识工作台。Outlinesave 可以向已运行的本地 Inbox 发送 Markdown 或富 HTML 内容；Inbox 提供文件夹、标签、标题与正文搜索、阅读和标注，并支持手动备份与恢复。
+### 本地优先处理对话
 
-[Inbox Local](https://github.com/sunny314woo/wisteria-suite/tree/main/apps/inbox-local)
+OutlineSave 默认在本地处理 AI 对话内容，不会把聊天正文上传至 Wisteria Software 自有服务器，也不需要注册 OutlineSave 账号。激活及必要运行数据可能用于授权和产品运营；Google Drive 备份由用户主动触发，并将所选备份数据保存到用户自己的云盘。详情参见[隐私政策](https://wisteriasoftware.uk/privacy)。
 
-## 社区版与 Outlinesave 正式版对比
+### 可选：配合 Inbox Local 管理知识
 
-| 功能 | 社区演示版 | Outlinesave |
+[Inbox Local](https://github.com/sunny314woo/wisteria-suite/tree/main/apps/inbox-local) 是另一个本地优先的知识管理工具，可用于整理从 OutlineSave 导出的 Markdown 和富 HTML 内容。它是可选的配套产品，不属于本仓库的社区演示版。
+
+## 社区演示版与 OutlineSave 正式版对比
+
+| 功能 | 本仓库社区演示版 | OutlineSave 正式版 |
 |---|---|---|
-| ChatGPT 对话目录 | 支持（仅前 15 条可跳转） | 支持 |
-| 两级目录与标题检索 | 不包含 | 支持 |
-| 高亮、备注、书签 | 不包含 | 支持 |
-| 离线 HTML / Markdown / JSON | 不包含 | 支持 |
+| ChatGPT 对话目录 | 支持 | 支持 |
+| 点击目录跳转 | 仅前 15 条 | 完整目录导航 |
+| 两级目录 | 不包含 | 支持 |
+| 目录标题搜索 | 不包含 | 支持 |
+| 导出 HTML 后全文搜索 | 不包含 | 支持 |
+| 高亮、下划线、备注与书签 | 不包含 | 支持 |
+| 离线 HTML 导出 | 不包含 | 支持 |
+| Markdown、JSON 导出 | 不包含 | 支持 |
 | Gemini、Claude、DeepSeek | 不包含 | 支持 |
+| PDF 导出 | 不包含 | 开发中，发布状态以商店为准 |
 
 ## 常见问题 FAQ
 
-### ChatGPT 如何生成完整对话目录？
+### 如何给 ChatGPT 长对话添加目录？
 
-社区版提供轻量目录演示；Outlinesave 正式版提供更完整的两级目录与目录检索。
+可在 [Chrome 商店](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj)安装 OutlineSave 正式版。本仓库提供的演示代码仅支持前 15 条目录跳转。
 
-### 如何搜索很长的 ChatGPT 对话？
+### 可以搜索 ChatGPT 长对话吗？
 
-Outlinesave 可以搜索在线对话的目录标题；导出为 HTML 后，还能在离线文件内进行全文搜索。
+正式版可搜索在线对话的目录标题；导出 HTML 后，还可以全文搜索保存的对话内容。
 
-### ChatGPT 能导出成一个离线 HTML 文件吗？
+### 可以把 ChatGPT 对话导出为离线 HTML 吗？
 
-可以。Outlinesave 支持单文件、响应式 HTML 导出，保留目录、搜索、书签、高亮与备注。
+可以。正式版可导出独立、响应式的 HTML 文件，保留目录、全文搜索及支持的已有标注。本地阅读时无需重新加载 ChatGPT 对话。
 
-### Outlinesave 需要注册账号或上传聊天记录吗？
+### OutlineSave 会上传我的 AI 对话吗？
 
-不需要注册 Outlinesave 账号；对话正文默认本地处理。Google Drive 备份由用户手动触发。
+对话正文默认在本地处理，不会上传到 Wisteria Software 自有服务器。手动备份和产品运行服务有各自的数据处理流程，详见[隐私政策](https://wisteriasoftware.uk/privacy)。
 
-### 如何统一管理多个 AI 对话导出？
+### OutlineSave 免费吗？
 
-可以使用独立的 Inbox Local，将 Markdown 或富 HTML 内容整理到本地知识工作台。
+正式版提供免费基础功能，也有试用和付费选项。导出额度及许可证权益可能调整，请以[官方产品页面](https://wisteriasoftware.uk/outline-pro)为准。
 
-### Outlinesave 免费吗？
+### 导出的 HTML 能在手机上阅读吗？
 
-有免费版。目录导航、书签、标注、Markdown / JSON 导出等基础能力可以免费使用；**独立 HTML 导出每周 1 次**（周一 UTC 重置）。另有一次性 7 天试用和可不限次 HTML 导出的付费许可证。具体价格与权益以[官方产品页面](https://wisteriasoftware.uk/outline-pro)为准。
+可以。HTML 文件适配不同屏幕，传到手机后可以使用兼容的浏览器打开，不需要重新加载原始 ChatGPT 对话。
 
-### 导出的 HTML 能在手机上离线阅读吗？
+## 在本地运行社区演示版
 
-可以。HTML 是独立的响应式单文件，传到手机后可通过兼容的浏览器离线打开，不必登录 ChatGPT。可先查看[在线 HTML 演示](https://wisteriasoftware.uk/demo)。
+1. 在 Chrome 打开 **chrome://extensions**。
+2. 开启「开发者模式」。
+3. 点击「加载已解压的扩展程序」。
+4. 选择本仓库文件夹。
 
-## 本地安装社区演示版
+## 许可证和源码说明
 
-打开 chrome://extensions，开启开发者模式，点击「加载已解压的扩展程序」，选择本仓库文件夹。
+本仓库是**源码可查看的社区演示版**，采用 [LICENSE](./LICENSE) 中的自定义许可证，**不是 MIT 或 Apache-2.0 开源授权**。公开演示代码并不代表授予商业正式版、产品品牌、服务端系统等专有内容的使用权。详情见 [NOTICE](./NOTICE)。
 
-## 许可证与源码说明
-
-社区演示版采用仓库 LICENSE 中的自定义许可证，属于源码可查看版本，不是 MIT 或 Apache-2.0 开源授权。品牌和商业权利请参阅 NOTICE。
-
-**[前往 Chrome 商店安装 Outlinesave](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj)** · **[在线体验 HTML 导出效果](https://wisteriasoftware.uk/demo)**
+**[从 Chrome 商店安装 OutlineSave](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj)** · **[在线体验 HTML 导出效果](https://wisteriasoftware.uk/demo)**
 
 **语言切换：** [简体中文](./README.zh-CN.md) · [English](./README.md) · [Español](./README.es.md) · [日本語](./README.ja.md) · [Français](./README.fr.md)
