@@ -1,110 +1,122 @@
 **Languages:** [English](./README.md) · [简体中文](./README.zh-CN.md) · [Español](./README.es.md) · [日本語](./README.ja.md) · [Français](./README.fr.md)
 
-# ChatGPT Outline Community — Table of Contents for Long ChatGPT Conversations
+# OutlineSave — ChatGPT Outline, Search & Export to HTML & PDF (Community Edition)
 
-A lightweight, source-available Chrome extension that adds a clickable outline to ChatGPT conversations. Jump to earlier questions without endless scrolling.
+OutlineSave is a browser extension for making long AI conversations easier to navigate, search, annotate, and save. It helps turn conversations into structured knowledge you can return to instead of endlessly scrolling through chat history.
+
+This repository contains an **early, limited, source-available ChatGPT demo**. It is not the source code for the current commercial extension, and its implementation does not represent the latest product release. The full OutlineSave extension is distributed separately through the Chrome Web Store.
+
+**[Install OutlineSave from the Chrome Web Store](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj)** · **[Explore the interactive HTML export demo](https://wisteriasoftware.uk/demo)** · **[Product details](https://wisteriasoftware.uk/outline-pro)**
 
 ![ChatGPT Outline community demo](./jump-ezgif.com-crop.gif)
 
-**[Try Outlinesave on Chrome Web Store](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj)** · **[Explore the interactive HTML export demo](https://wisteriasoftware.uk/demo)**
+> **Community demo limitation:** Only the first 15 outline entries support jumping. The search, annotation, export, and other full-extension features described below belong to the separately installed commercial version of OutlineSave.
 
-> **Community Edition:** Only the first 15 outline entries support jumping. The Outlinesave features below belong to the separately installed full extension.
+## What the community demo includes
 
-## Why use a conversation outline?
-
-Long AI conversations are hard to revisit. A table of contents helps you locate an earlier question and return to the relevant answer.
-
-## What the Community Edition includes
-
-- Clickable outline of ChatGPT conversations
+- A clickable outline for ChatGPT conversations
 - Automatic outline refresh as the conversation grows
-- Left/right sidebar positioning
-- Demo limitation: only the first 15 outline entries support jumping
+- Left- or right-side outline positioning
+- A lightweight way to explore conversation navigation
 
-## Need more? Meet Outlinesave
+The 15-entry jump limit applies to this repository's demo build only. It is not a limit of the full OutlineSave extension.
 
-Outlinesave is the actively developed browser extension for navigating, searching, annotating and exporting AI conversations across ChatGPT, Gemini, Claude and DeepSeek.
+## Explore the full OutlineSave extension
 
-### Full two-level outline and TOC search
+The full browser extension supports conversations on **ChatGPT, Gemini, Claude, and DeepSeek**. Feature availability and interactions can vary by AI platform.
 
-User questions form the first level; AI response headings form the second. Search question and heading titles, then navigate to matching locations. For ChatGPT, the extension progressively loads very long conversations; 400+ turns have been tested, but loading may take time and depends on the source platform.
+### ChatGPT Outline — two-level navigation for long conversations
 
-### Low-distraction navigation
+The full extension organizes a conversation into a two-level outline: user questions at the first level and headings from AI responses at the second. Search outline titles and jump to the relevant part of a conversation without manually scrolling through every message.
 
-Choose an expanded or compact sidebar, collapse to a small floating control, hide the panel when not needed, resize or reposition supported panels, and use quick tools. J/K navigate entries and Esc closes the panel where supported; interactions differ by AI platform.
+For very long ChatGPT conversations, the outline can load progressively. Loading time and completeness depend on the source platform and the conversation.
 
-### Offline, searchable, responsive HTML export
+### Search — find the right part of a conversation
 
-Export a self-contained HTML knowledge page that can be opened locally, including on a phone. Keep the conversation outline, full-text search, bookmarks, highlight-color filtering, notes and annotations. Code, mathematical formulas and Mermaid diagrams are supported. No extension or live ChatGPT session is needed to read the saved file.
+Search question and response-heading titles in the live conversation outline. When a conversation is exported to HTML, use full-text search to find words and passages in the saved content.
 
-**[Explore the interactive HTML export demo](https://wisteriasoftware.uk/demo)**
+### Export to HTML — save a searchable, offline knowledge page
 
-### Highlights, notes, bookmarks and other formats
+Export a conversation as a self-contained, responsive HTML file. Open it locally without returning to ChatGPT or waiting for the original conversation to load.
 
-Mark important passages with four highlight colors, underline text, add notes, bookmark useful sections and filter what matters. Markdown and JSON exports are also available.
+The HTML export can preserve:
 
-### Local-first, no Outlinesave account required
+- The conversation outline and navigation
+- Full-text search
+- Existing highlights, underlines, notes, and bookmarks
+- Bookmark and highlight-color filtering
+- Code blocks, mathematical formulas, and Mermaid diagrams
 
-Outlinesave processes conversation content locally by default and does not upload AI conversation text to its servers. No Outlinesave user account is required. The store version uses minimal anonymous operational events; optional activation, manual Google Drive backup and sending to a local Inbox service involve their respective connections.
+**[Try the interactive HTML export demo](https://wisteriasoftware.uk/demo)**
 
-### Manual Google Drive backup
+### PDF export
 
-Choose when to save Markdown content to your own Google Drive. This is user-initiated backup, not automatic background syncing.
+PDF export is under development. It is **not yet part of the published Chrome Web Store build** as of this README update. Check the [Chrome Web Store listing](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj) for the capabilities available in the current release.
 
-### Manage exported knowledge with Inbox Local
+### Highlights, notes, bookmarks, Markdown, and JSON
 
-Inbox Local is a separate local-first knowledge workspace. Send Markdown or rich HTML from Outlinesave to a running local Inbox instance; organize documents with folders and tags, search titles and content, and read or annotate saved material. Inbox also supports manual backup and restore.
+Mark important passages with four highlight colors, underline text, add notes, and bookmark useful sections. Markdown and JSON export options are also available in the full extension.
 
-[Inbox Local](https://github.com/sunny314woo/wisteria-suite/tree/main/apps/inbox-local)
+### Local-first conversation handling
 
-## Community Edition vs Outlinesave
+OutlineSave processes AI conversation content locally by default and does not upload conversation text to Wisteria Software's servers. No OutlineSave user account is required. Activation and operational data may be processed for licensing and product operation; optional Google Drive backup is initiated by the user and sends the selected backup data to the user's own Drive. See the [Privacy Policy](https://wisteriasoftware.uk/privacy) for details.
 
-| Capability | Community demo | Outlinesave |
+### Optional workflow with Inbox Local
+
+[Inbox Local](https://github.com/sunny314woo/wisteria-suite/tree/main/apps/inbox-local) is a separate local-first knowledge workspace. It can help organize Markdown and rich HTML content exported from OutlineSave. It is an optional companion product, not part of this community demo.
+
+## Community demo vs. full OutlineSave
+
+| Capability | Community demo in this repository | Full OutlineSave extension |
 |---|---|---|
-| ChatGPT clickable outline | Yes (15 jumpable items) | Yes |
-| Two-level outline and title search | Not included | Yes |
-| Highlights, notes and bookmarks | Not included | Yes |
-| Offline HTML / Markdown / JSON | Not included | Yes |
-| Gemini, Claude and DeepSeek | Not included | Yes |
+| ChatGPT conversation outline | Yes | Yes |
+| Click-to-jump navigation | First 15 entries only | Full outline navigation |
+| Two-level outline | Not included | Yes |
+| Search outline titles | Not included | Yes |
+| Full-text search in exported HTML | Not included | Yes |
+| Highlights, underlines, notes, and bookmarks | Not included | Yes |
+| Offline HTML export | Not included | Yes |
+| Markdown and JSON export | Not included | Yes |
+| Gemini, Claude, and DeepSeek support | Not included | Yes |
+| PDF export | Not included | In development; check the store listing for release status |
 
 ## Frequently asked questions
 
-### How do I add a table of contents to ChatGPT?
+### How do I add an outline to a long ChatGPT conversation?
 
-Install the Community Edition for a lightweight demo, or install Outlinesave for the fuller two-level outline and search experience.
+Install the full OutlineSave extension from the [Chrome Web Store](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj). The community demo in this repository is limited to 15 jumpable entries.
 
-### Can I search a long ChatGPT conversation?
+### Can I search a ChatGPT conversation?
 
-Outlinesave searches outline titles inside the live conversation. Exported HTML also offers full-text search for the saved content.
+The full extension searches outline titles in the live conversation. After exporting to HTML, you can also search the saved conversation text.
 
-### Can I export ChatGPT to a single offline HTML file?
+### Can I export a ChatGPT conversation as an offline HTML file?
 
-Yes. Outlinesave exports a standalone responsive HTML knowledge page with search, outline, bookmarks, highlights and notes.
+Yes. The full extension exports a standalone, responsive HTML file with an outline, full-text search, and supported saved annotations. You can open the file locally without an active ChatGPT session.
 
-### Does Outlinesave require an account or upload my chats?
+### Does OutlineSave upload my conversations?
 
-No Outlinesave account is required, and chat text is processed locally by default. Optional Google Drive backup is initiated by you.
+Conversation text is processed locally by default and is not uploaded to Wisteria Software's servers. Optional backup and product-operation services have separate data flows; see the [Privacy Policy](https://wisteriasoftware.uk/privacy).
 
-### Can I organize multiple AI exports?
+### Is OutlineSave free?
 
-Yes. Inbox Local is a separate application for organizing imported Markdown and rich HTML in a local workspace.
+The full extension offers free functionality as well as trial and paid options. Export allowances and license details can change, so check the [official product page](https://wisteriasoftware.uk/outline-pro) for current terms.
 
-### Is Outlinesave free?
+### Can I read an exported HTML file on my phone?
 
-Yes. The Free edition keeps core navigation, bookmarks, annotations, Markdown/JSON export and other basic features. It includes **one standalone HTML export per week** (reset Monday UTC). A one-time 7-day trial and paid licenses offer unlimited HTML exports. Pricing and availability may change; see the [official product page](https://wisteriasoftware.uk/outline-pro).
-
-### Can I read the exported HTML on my phone?
-
-Yes. The responsive, standalone HTML file can be transferred to a phone and opened in a compatible browser without an internet connection. See the [HTML export demo](https://wisteriasoftware.uk/demo) for an example.
+The exported HTML is responsive and can be transferred to a phone and opened in a compatible browser. It does not require the original ChatGPT conversation to be loaded.
 
 ## Run the community demo locally
 
-Open chrome://extensions, enable Developer mode, select Load unpacked and choose this repository folder.
+1. Open **chrome://extensions** in Chrome.
+2. Enable **Developer mode**.
+3. Select **Load unpacked**.
+4. Choose this repository folder.
 
 ## License and source availability
 
-This community demo is source-available under the custom LICENSE, not MIT or Apache-2.0. The code does not grant rights to the product branding or commercial feature sets; see NOTICE.
+This repository is a **source-available community demo** under the custom license in [LICENSE](./LICENSE); it is not licensed under MIT or Apache-2.0. Public access to this demo's source code does not grant rights to the commercial extension, product branding, server-side services, or other proprietary materials. See [NOTICE](./NOTICE) for details.
 
-**[Try Outlinesave on Chrome Web Store](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj)** · **[Explore the interactive HTML export demo](https://wisteriasoftware.uk/demo)**
+**[Install OutlineSave from the Chrome Web Store](https://chromewebstore.google.com/detail/opbngifmlnoahbhjhgmngkggedlofddj)** · **[Explore the interactive HTML export demo](https://wisteriasoftware.uk/demo)**
 
 **Languages:** [English](./README.md) · [简体中文](./README.zh-CN.md) · [Español](./README.es.md) · [日本語](./README.ja.md) · [Français](./README.fr.md)
